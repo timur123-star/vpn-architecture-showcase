@@ -11,7 +11,7 @@
 [![WireGuard](https://img.shields.io/badge/WireGuard-tunnel-88171a?logo=wireguard&logoColor=white)](https://www.wireguard.com)
 [![Python](https://img.shields.io/badge/automation-Python%203-3776ab?logo=python&logoColor=white)](https://www.python.org)
 
-**Языки:** [English](./README.md) · [Русский](./README.ru.md) · [Español](./README.es.md) · [Français](./README.fr.md) · [Отчёт о работах](./DELIVERY_REPORT.md)
+**Языки:** [English](./README.md) · [Русский](./README.ru.md) · [Español](./README.es.md) · [Français](./README.fr.md)
 
 ---
 
