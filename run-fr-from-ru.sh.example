@@ -1,0 +1,3 @@
+#!/bin/bash
+export SSHPASS="${SSHPASS:?export SSHPASS first}"
+sshpass -e ssh -o StrictHostKeyChecking=no root@<FR_WG_IP> "$@"

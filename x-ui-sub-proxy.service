@@ -1,0 +1,12 @@
+[Unit]
+Description=x-ui subscription proxy with Reality pbk fix
+After=network.target x-ui.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /root/sub-proxy.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

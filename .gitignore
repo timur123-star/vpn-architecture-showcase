@@ -1,0 +1,8 @@
+.ssh/
+*.pem
+*.key
+run-fr-from-ru.sh
+*credentials*
+*secrets*
+.env
+__pycache__/

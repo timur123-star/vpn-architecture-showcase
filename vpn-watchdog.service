@@ -1,0 +1,7 @@
+[Unit]
+Description=VPN watchdog (RU stack health)
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/vpn-watchdog.sh

@@ -1,0 +1,35 @@
+Copyright (c) 2026 Timur Valerievich (Тимур Валерьевич).
+All rights reserved.
+
+This repository, including its source code, documentation, configuration examples,
+and automation scripts, is the intellectual property of the copyright holder and is
+published publicly for portfolio and reference purposes only.
+
+You may:
+  - view and read the source code in this repository;
+  - clone the repository locally for personal, non-commercial study;
+  - reference small, attributed snippets in technical articles or learning
+    materials, with a clear link back to this repository.
+
+You may NOT, without prior written permission of the copyright holder:
+  - copy, fork, mirror, redistribute, or republish this repository or any
+    portion of it, in source or compiled form, in any public or private venue;
+  - deploy this code against production infrastructure you do not own or operate,
+    in whole or in substantial part, without understanding the security impact;
+  - reuse the documentation, diagrams, or automation layout in another commercial
+    engagement or product without attribution and permission;
+  - remove, alter, or obscure any copyright, attribution, or authorship notices.
+
+All server addresses, keys, UUIDs, subscription identifiers, passwords, and
+personal names in this repository are placeholders or fictional examples. They
+must be replaced with your own secrets on your own infrastructure. The author
+does not operate or guarantee any live service described in the documentation.
+
+Permission requests can be sent via the contact information published on the
+author's GitHub profile.
+
+THE REPOSITORY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT
+OF, OR IN CONNECTION WITH THIS REPOSITORY OR ITS USE.

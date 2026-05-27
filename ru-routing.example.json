@@ -1,0 +1,48 @@
+{
+  "dns": {
+    "servers": [
+      {"address": "https://1.1.1.1/dns-query", "domains": ["geosite:geolocation-!cn"], "skipFallback": true},
+      {"address": "https://dns.google/dns-query", "domains": ["geosite:google"], "skipFallback": true},
+      "localhost"
+    ],
+    "queryStrategy": "UseIPv4"
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {"type": "field", "inboundTag": ["api"], "outboundTag": "api"},
+      {"type": "field", "port": "53", "outboundTag": "dns-out"},
+      {"type": "field", "ip": ["geoip:private"], "outboundTag": "blocked"},
+      {"type": "field", "protocol": ["bittorrent"], "outboundTag": "blocked"},
+      {"type": "field", "domain": ["<FR_WG_IP>", "<FR_SERVER_IP>", "vpn.example.com"], "outboundTag": "direct"},
+      {
+        "type": "field",
+        "domain": ["geosite:google", "domain:gemini.google.com"],
+        "balancerTag": "BRUTAL"
+      },
+      {
+        "type": "field",
+        "domain": ["geosite:category-ru", "regexp:.*\\.ru$", "domain:vk.com", "domain:yandex.ru"],
+        "outboundTag": "direct"
+      },
+      {"type": "field", "network": "tcp,udp", "balancerTag": "BRUTAL"}
+    ],
+    "balancers": [{
+      "tag": "BRUTAL",
+      "selector": [
+        "PARIS — WireGuard Backbone",
+        "PARIS — VLESS Reality Vision (TCP/443)",
+        "PARIS — Hysteria2 (UDP/8443)",
+        "PARIS — Trojan TLS (TCP/8442)"
+      ],
+      "fallbackTag": "PARIS — WireGuard Backbone",
+      "strategy": {"type": "leastPing"}
+    }]
+  },
+  "observatory": {
+    "subjectSelector": ["PARIS — WireGuard Backbone", "PARIS — VLESS Reality Vision (TCP/443)"],
+    "probeUrl": "https://www.google.com/generate_204",
+    "probeInterval": "20s",
+    "enableConcurrency": true
+  }
+}
